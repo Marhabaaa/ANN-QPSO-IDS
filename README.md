@@ -11,7 +11,8 @@ N: numero de samples para entrenar la red
 	C: parámetro de penalidad de la pseudoinversa
 
 Ejemplo
-	python main.py 3000 20 30 10000
+
+    python main.py 3000 20 30 10000
 
 
 Una vez ejecutado el script, al final le pedira que ingrese datos para predecir.
