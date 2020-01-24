@@ -1,11 +1,11 @@
 Para ejecutar el predictor, debe tener instalado el compilador de python en su equipo.
 
-El script que debe correr es main.py, de la siguiente forma
+El script que debe correr es main.py, de la siguiente forma:
 
-	python main.py N Np maxIter C
+    python main.py N Np maxIter C
 
 Donde
-	N: numero de samples para entrenar la red
+N: numero de samples para entrenar la red
 	Np: cantidad de particulas
 	maxIter: número de iteraciones para qpso
 	C: parámetro de penalidad de la pseudoinversa

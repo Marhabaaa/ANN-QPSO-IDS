@@ -8,18 +8,18 @@ input_nodes = 41
 hidden_nodes = 100
 
 # Define sample size for trainig (N) and test (M)
-N = 5000
+N = int(sys.argv[1])
 M = 3000
 
 # Define QPSO topology
-number_of_particles = 20
-max_iter = 30
+number_of_particles = int(sys.argv[2])
+max_iter = int(sys.argv[3])
 # Set range of Creativity coefficient
 a = 0.2
 b = 0.95
 
 # Set Pseudo-inverse penalty parameter
-C = 99999999999
+C = int(sys.argv[4])
 
 # Get data
 train_data, y_train_data = data_arr.pre_process_data(
@@ -43,8 +43,8 @@ B = annx.get_beta(annx.get_H(train_data, weights), y_train_data)
 
 x = '-1'
 while x != 'exit':
+    x = str(input('Ingrese datos a predecir (ingrese exit para salir): '))
     if x != 'exit':
-        x = str(input('Ingrese datos a predecir: (ingrese exit para salir)'))
         x = x.strip().split(',')
 
         prediction = annx.predict(data_arr.norma(data_arr.numericalise_data_x(x)), weights, B)
